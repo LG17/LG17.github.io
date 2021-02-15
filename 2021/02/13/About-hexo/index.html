@@ -17,18 +17,18 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"192.168.43.135","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"192.168.43.135","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="install and config">
+  <meta name="description" content="安装 安装配置git 安装nodejs npm，配置全局路径，缓存路径，加入环境变量 github 新建仓库，配置ssh keys，创建分支hexo master，配置github pages 安装nrm，修改npm源 全局安装hexo cli,修改配置及主题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="About hexo">
+<meta property="og:title" content="hexo的安装配置与迁移备份">
 <meta property="og:url" content="http://192.168.43.135/2021/02/13/About-hexo/index.html">
 <meta property="og:site_name" content="LG的博客">
-<meta property="og:description" content="install and config">
+<meta property="og:description" content="安装 安装配置git 安装nodejs npm，配置全局路径，缓存路径，加入环境变量 github 新建仓库，配置ssh keys，创建分支hexo master，配置github pages 安装nrm，修改npm源 全局安装hexo cli,修改配置及主题">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-02-13T08:42:59.000Z">
-<meta property="article:modified_time" content="2021-02-13T18:05:48.958Z">
+<meta property="article:modified_time" content="2021-02-15T06:15:45.945Z">
 <meta property="article:author" content="LG">
 <meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>About hexo | LG的博客</title>
+  <title>hexo的安装配置与迁移备份 | LG的博客</title>
   
 
 
@@ -105,7 +105,6 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -125,38 +124,11 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
   </ul>
 </nav>
 
 
 
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-  </div>
-</div>
-
-    </div>
-  </div>
 
 </div>
     </header>
@@ -196,7 +168,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          About hexo
+          hexo的安装配置与迁移备份
         </h1>
 
         <div class="post-meta">
@@ -213,7 +185,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-14 02:05:48" itemprop="dateModified" datetime="2021-02-14T02:05:48+08:00">2021-02-14</time>
+                <time title="修改时间：2021-02-15 14:15:45" itemprop="dateModified" datetime="2021-02-15T14:15:45+08:00">2021-02-15</time>
               </span>
 
           
@@ -234,7 +206,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="install-and-config"><a href="#install-and-config" class="headerlink" title="install and config"></a>install and config</h1>
+        <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><ol>
+<li>安装配置git</li>
+<li>安装<code>nodejs</code> <code>npm</code>，配置全局路径，缓存路径，加入环境变量</li>
+<li><code>github</code> 新建仓库，配置<code>ssh keys</code>，创建分支<code>hexo</code> <code>master</code>，配置<code>github pages</code></li>
+<li>安装<code>nrm</code>，修改<code>npm</code>源</li>
+<li>全局安装<code>hexo cli</code>,修改配置及主题</li>
+</ol>
+
     </div>
 
     
@@ -314,7 +293,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#install-and-config"><span class="nav-number">1.</span> <span class="nav-text">install and config</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -424,10 +403,6 @@
   
 
 
-
-
-  
-<script src="/js/local-search.js"></script>
 
 
 
